@@ -1,0 +1,10 @@
+C:\Users\admin\source\repos\ArchiverApp\ArchiverApp\obj\Debug\ArchiverApp.csproj.AssemblyReference.cache
+C:\Users\admin\source\repos\ArchiverApp\ArchiverApp\obj\Debug\ArchiverApp.Form1.resources
+C:\Users\admin\source\repos\ArchiverApp\ArchiverApp\obj\Debug\ArchiverApp.Properties.Resources.resources
+C:\Users\admin\source\repos\ArchiverApp\ArchiverApp\obj\Debug\ArchiverApp.csproj.GenerateResource.cache
+C:\Users\admin\source\repos\ArchiverApp\ArchiverApp\obj\Debug\ArchiverApp.csproj.CoreCompileInputs.cache
+C:\Users\admin\source\repos\ArchiverApp\ArchiverApp\bin\Debug\ArchiverApp.exe.config
+C:\Users\admin\source\repos\ArchiverApp\ArchiverApp\bin\Debug\ArchiverApp.exe
+C:\Users\admin\source\repos\ArchiverApp\ArchiverApp\bin\Debug\ArchiverApp.pdb
+C:\Users\admin\source\repos\ArchiverApp\ArchiverApp\obj\Debug\ArchiverApp.exe
+C:\Users\admin\source\repos\ArchiverApp\ArchiverApp\obj\Debug\ArchiverApp.pdb

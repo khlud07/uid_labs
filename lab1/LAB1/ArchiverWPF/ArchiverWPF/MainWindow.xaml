@@ -1,0 +1,147 @@
+﻿<Window x:Class="ArchiverWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ArchiverWPF"
+        mc:Ignorable="d"
+        Title="Архіватор WPF"
+        Height="600"
+        Width="900"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen"
+        Background="#F5F7FA">
+
+    <Window.Resources>
+        <Style x:Key="ModernButtonStyle" TargetType="Button">
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="FontFamily" Value="Segoe UI"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="Padding" Value="10,6"/>
+            <Setter Property="Margin" Value="0,0,0,12"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}"
+                                CornerRadius="12">
+                            <ContentPresenter HorizontalAlignment="Center"
+                                              VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+
+    <Grid Margin="25">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0"
+                   Text="Архіватор файлів"
+                   FontSize="28"
+                   FontWeight="Bold"
+                   FontFamily="Segoe UI"
+                   Foreground="#212529"
+                   HorizontalAlignment="Center"/>
+
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="3*"/>
+                <ColumnDefinition Width="30"/>
+                <ColumnDefinition Width="2*"/>
+            </Grid.ColumnDefinitions>
+
+            <Border Grid.Column="0"
+                    Background="White"
+                    CornerRadius="16"
+                    Padding="10">
+                <ListBox x:Name="listBoxFiles"
+                         FontFamily="Segoe UI"
+                         FontSize="14"
+                         BorderThickness="0"
+                         Background="White"/>
+            </Border>
+
+            <StackPanel Grid.Column="2"
+                        VerticalAlignment="Top">
+                <Button x:Name="btnAddFiles"
+                        Content="Додати файли"
+                        Height="50"
+                        Background="#28A745"
+                        Style="{StaticResource ModernButtonStyle}"
+                        Click="btnAddFiles_Click"/>
+
+                <Button x:Name="btnRemoveFile"
+                        Content="Видалити файл"
+                        Height="50"
+                        Background="#DC3545"
+                        Style="{StaticResource ModernButtonStyle}"
+                        Click="btnRemoveFile_Click"/>
+
+                <Button x:Name="btnClearList"
+                        Content="Очистити список"
+                        Height="50"
+                        Background="#FFC107"
+                        Foreground="Black"
+                        Style="{StaticResource ModernButtonStyle}"
+                        Click="btnClearList_Click"/>
+            </StackPanel>
+        </Grid>
+
+        <Grid Grid.Row="4">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="15"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="15"/>
+                <ColumnDefinition Width="150"/>
+            </Grid.ColumnDefinitions>
+
+            <TextBlock Grid.Column="0"
+                       Text="Шлях до архіву:"
+                       VerticalAlignment="Center"
+                       FontSize="15"
+                       FontFamily="Segoe UI"
+                       Foreground="#333333"/>
+
+            <TextBox x:Name="txtArchivePath"
+                     Grid.Column="2"
+                     Height="36"
+                     FontSize="14"
+                     FontFamily="Segoe UI"
+                     Padding="8,4"
+                     VerticalContentAlignment="Center"/>
+
+            <Button x:Name="btnChooseArchivePath"
+                    Grid.Column="4"
+                    Content="Обрати..."
+                    Height="36"
+                    Background="#6C757D"
+                    Style="{StaticResource ModernButtonStyle}"
+                    Margin="0"
+                    Click="btnChooseArchivePath_Click"/>
+        </Grid>
+
+        <Button x:Name="btnCreateArchive"
+                Grid.Row="6"
+                Content="Створити архів"
+                Width="240"
+                Height="52"
+                HorizontalAlignment="Center"
+                Background="#0078D7"
+                Style="{StaticResource ModernButtonStyle}"
+                Margin="0"
+                Click="btnCreateArchive_Click"/>
+    </Grid>
+</Window>

@@ -1,0 +1,16 @@
+{
+  "name": "electron-archiver",
+  "version": "1.0.0",
+  "description": "Архіватор на Electron",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "archiver": "^7.0.1",
+    "electron": "^37.2.0"
+  }
+}

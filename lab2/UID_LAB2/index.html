@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Архіватор</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <div class="app-card">
+      <header class="app-header">
+        <div>
+          <p class="app-badge">Electron Framework</p>
+          <h1>Архіватор файлів</h1>
+          <p class="app-subtitle">
+            Оберіть файли, задайте місце збереження та створіть ZIP-архів.
+          </p>
+        </div>
+      </header>
+
+      <section class="content-grid">
+        <div class="files-panel">
+          <div class="panel-header">
+            <h2>Обрані файли</h2>
+            <span id="fileCount" class="file-count">0 файлів</span>
+          </div>
+
+          <ul id="fileList"></ul>
+        </div>
+
+        <div class="actions-panel">
+          <button id="addFilesBtn" class="btn btn-green">Додати файли</button>
+          <button id="removeFileBtn" class="btn btn-red">Видалити вибраний</button>
+          <button id="clearListBtn" class="btn btn-yellow">Очистити список</button>
+        </div>
+      </section>
+
+      <section class="save-panel">
+        <label for="archivePath">Шлях до архіву</label>
+        <div class="save-row">
+          <input type="text" id="archivePath" readonly placeholder="Оберіть місце збереження архіву" />
+          <button id="choosePathBtn" class="btn btn-gray btn-small">Обрати...</button>
+        </div>
+      </section>
+
+      <section class="bottom-panel">
+        <button id="createArchiveBtn" class="btn btn-blue btn-create">Створити архів</button>
+        <p id="statusMessage" class="status-message">Готово до роботи</p>
+      </section>
+    </div>
+  </div>
+
+  <script src="renderer.js"></script>
+</body>
+</html>
